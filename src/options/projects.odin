@@ -27,7 +27,7 @@ populate_new_project :: proc(directory_array: json.Array, prefix: string) {
     if item_type == FOLDER_ITEM_TYPE {
       create_new_folder(full_item_path, item_name, prefix, current_item);
     } else if item_type == FILE_ITEM_TYPE {
-      create_new_file(full_item_path, item_name);
+      create_new_file(full_item_path, item_name, prefix);
     }
   }
 }
@@ -46,9 +46,9 @@ create_new_folder :: proc(full_item_path, item_name, prefix: string, item: json.
 }
 
 @(private="file")
-create_new_file :: proc(full_item_path, item_name: string) {
+create_new_file :: proc(full_item_path, item_name, prefix: string) {
   // get the file path of the current file
-  file_path := strings.concatenate({ utilities.global_data.current_project_type_path, "/", item_name });
+  file_path := strings.concatenate({ utilities.global_data.current_project_type_path, "/", prefix, "/", item_name });
 
   // check if the file exists
   if os.is_file(file_path) {
