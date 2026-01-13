@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "name": "normal",
+
+      "directory": [
+        {
+          "type": "folder",
+          "name": "src",
+          "sub-directory": [
+            {
+              "type": "file",
+              "name": "main.odin"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "bin",
+          "sub-directory": [
+            {
+              "type": "file",
+              "name": "build.bat"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "sdl3",
+
+      "directory": [
+        {
+          "type": "folder",
+          "name": "src",
+          "sub-directory": [
+            {
+              "type": "folder",
+              "name": "gfx",
+              "sub-directory": [
+                {
+                  "type": "folder",
+                  "name": "render",
+                  "sub-directory": [
+                    {
+                      "type": "file",
+                      "name": "render.odin"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "window.odin"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "main.odin"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "bin",
+          "sub-directory": [
+            {
+              "type": "file",
+              "name": "build.bat"
+            },
+            {
+              "type": "file",
+              "name": "SDL3.dll"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
