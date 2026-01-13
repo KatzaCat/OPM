@@ -1,1 +1,0 @@
-odin build ../src -build-mode:exe -out:opm.exe -warnings-as-errors
